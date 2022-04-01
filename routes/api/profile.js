@@ -100,4 +100,38 @@ router.post(
   },
 );
 
+// @route Get api/profile/
+// @desc get all profiles
+// @acces Public
+router.get('/', async (req, res) => {
+  try {
+    const profiles = await Profile.find().populate('user', ['name', 'avatar']);
+
+    res.json(profiles);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('server error');
+  }
+});
+
+// @route Get api/profile/user/:user_id
+// @desc get orifle by user id
+// @acces Public
+router.get('/user/:user_id', async (req, res) => {
+  try {
+    const profile = await Profile.findOne({ user: req.params.user_id }).populate('user', ['name', 'avatar']);
+
+    if (!profile) {
+      return res.status(400).json({ msg: 'there is no profile for this user' });
+    }
+
+    res.json(profile);
+  } catch (err) {
+    console.error(err);
+    if (err.status == 'ObjectId') {
+      return res.status(400).json({ msg: 'there is no profile for this user' });
+    }
+    res.status(500).send('server error');
+  }
+});
 module.exports = router;

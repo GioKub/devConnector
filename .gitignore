@@ -1,7 +1,12 @@
 /node_modules
 <<<<<<< HEAD
+<<<<<<< HEAD
 steps.txt
 ./steps.txt
 =======
 package-lock.json
 >>>>>>> 3fbece5abcfddeb6eab3ad5c5bb77c149f661ec9
+=======
+steps.txt
+./steps.txt
+>>>>>>> 4441a2829d657e77c3174912893adc86cd3a68c9

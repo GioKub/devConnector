@@ -280,11 +280,19 @@ router.delete('/education/:edu_id', auth, async (req, res) => {
 router.get('/github/:username', async (req, res) => {
   try {
     const uri = encodeURI(
+<<<<<<< HEAD
       `https://api.github.com/users/${req.params.username}/repos?per_page=5&sort=created:asc`,
     );
     const headers = {
       'user-agent': 'node.js',
       Authorization: `token ${config.get('githubToken')}`,
+=======
+      `https://api.github.com/users/${req.params.username}/repos?per_page=5&sort=created:asc`
+    );
+    const headers = {
+      'user-agent': 'node.js',
+      Authorization: `token ${config.get('githubToken')}`
+>>>>>>> 4441a2829d657e77c3174912893adc86cd3a68c9
     };
 
     const gitHubResponse = await axios.get(uri, { headers });
@@ -295,4 +303,8 @@ router.get('/github/:username', async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4441a2829d657e77c3174912893adc86cd3a68c9
 module.exports = router;

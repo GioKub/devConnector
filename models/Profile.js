@@ -27,6 +27,10 @@ const ProfileSchema = new mongoose.Schema({
   },
   githubusername: {
     type: String,
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4441a2829d657e77c3174912893adc86cd3a68c9
   },
   experience: [
     {
@@ -56,6 +60,10 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
       },
     },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4441a2829d657e77c3174912893adc86cd3a68c9
   ],
   education: [
     {

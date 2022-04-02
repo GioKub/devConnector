@@ -1,3 +1,7 @@
 /node_modules
+<<<<<<< HEAD
 steps.txt
 ./steps.txt
+=======
+package-lock.json
+>>>>>>> 3fbece5abcfddeb6eab3ad5c5bb77c149f661ec9
